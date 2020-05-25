@@ -40,7 +40,7 @@ If you are using **pip** you can use the [requirements.txt](requirements/elmo-re
 The evaluation of the model can be done by executing the `run_ner.py`. This function accepts 3 arguments:
 - sentence:  the sentence you want to evaluate - (string)
 - type: the model name: CONLL or GMB - (string)
-- show_example: if set to True, it will evaluate 3 predefined sentences - (Bool)
+- show_example: if set to True, it will evaluate 3 predefined sentences - (Bool)\
 Example: \
 `run_ner.py --sentence "I just had breakfast in London in Blue Cafe" --type GMB`\
 `run_ner.py --type GMB --show_example True`
