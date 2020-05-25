@@ -21,7 +21,7 @@ If you want to retrain the model you can execute \
 `python parser.py --dataset conll --file_name ./eng.train` or \
 `python parser.py --dataset gmb --file_name ./ner_first_preprocessing.csv` and it will generate json file for that dataset. 
 
-Download the weights from the google drive link above. They are located in the *weights* folder. The file **conll_ner_bert_pt** are weights trained on CoNLL2003  and **gmb_ner_bert_pt** are trained on GMB dataset.
+Download the weights from the google drive link above. They are located in the *BERT models* folder. The file **conll_ner_bert_pt** are weights trained on CoNLL2003  and **gmb_ner_bert_pt** are trained on GMB dataset.
 After the installations are complete, you can run the **BERT PyTorch.ipynb**. You need to execute the first cell (to import the needed dependencies) and depending on which model you are going to test, execute the cell with that specific tags (they have titles above them to differentiate the two models). Then scroll to the bottom where you will find further instructions. 
 
 ### Bi-LSTM + ELMo
@@ -40,7 +40,7 @@ If you are using **pip** you can use the [requirements.txt](requirements/elmo-re
 The evaluation of the model can be done by executing the `run_ner.py`. This function accepts 3 arguments:
 - sentence:  the sentence you want to evaluate - (string)
 - type: the model name: CONLL or GMB - (string)
-- show_example: if set to True, it will evaluate 3 predefined sentences - (Bool)\
+- show_example: if set to True, it will evaluate 3 predefined sentences - (boolean)\
 Example: \
 `run_ner.py --sentence "I just had breakfast in London in Blue Cafe" --type GMB`\
 `run_ner.py --type GMB --show_example True`
