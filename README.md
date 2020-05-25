@@ -27,5 +27,15 @@ After the installations are complete, you can run the **BERT PyTorch.ipynb**. Yo
 
 ### Bi-LSTM + ELMo
 
+- tensorflow==1.15 `conda install -c conda-forge tensorflow=1.15.0`
+- tensorflow-gpu==1.15.0 `conda install -c anaconda tensorflow-gpu=1.15.0`
+- tensorflow_hub=0.6 `conda install -c conda-forge tensorflow-hub=0.6.0`
+- PyYAML==3.13 `conda install -c anaconda pyyaml=3.13.0`
+- keras==2.3.1 `conda install -c conda-forge keras=2.3.1`
+- sklearn
+- sklearn_crfsuite `conda install -c conda-forge sklearn-crfsuite`
+- numpy, pandas, json
+
+If you are using **pip** you can use `pip install requirements.txt`
 
 
