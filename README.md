@@ -24,7 +24,7 @@ If you want to retrain the model you can execute \
 Download the weights from the google drive link above. They are located in the *BERT models* folder. The file **conll_ner_bert_pt** are weights trained on CoNLL2003  and **gmb_ner_bert_pt** are trained on GMB dataset.
 After the installations are complete, you can run the **BERT PyTorch.ipynb**. You need to execute the first cell (to import the needed dependencies) and depending on which model you are going to test, execute the cell with that specific tags (they have titles above them to differentiate the two models). Then scroll to the bottom where you will find further instructions. 
 
-### Bi-LSTM + ELMo
+### ELMo + Bi-LSTM
 
 - tensorflow==1.15 `conda install -c conda-forge tensorflow=1.15.0`
 - tensorflow-gpu==1.15.0 `conda install -c anaconda tensorflow-gpu=1.15.0`
@@ -44,3 +44,14 @@ The evaluation of the model can be done by executing the `run_ner.py`. This func
 Example: \
 `run_ner.py --sentence "I just had breakfast in London in Blue Cafe" --type GMB`\
 `run_ner.py --type GMB --show_example True`
+
+
+### Bi-LSTM + CRF
+
+- tensorflow==2.0.0
+- keras==2.3.1
+- keras_contrib==0.0.2
+- sklearn_crfsuite
+- numpy, pandas, json
+
+You can find the weights for the best Bi-LSTM + CRF model (trained on GMB) in the folder **BI-LSTM + CRF** on drive. Just upload the model in the notebook [BILSTM_CRF_v2.ipynb](https://github.com/LDodevska/NLP_Assignment/blob/master/BILSTM_CRF_v2.ipynb) and continue with your analysis.
