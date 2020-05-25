@@ -1,4 +1,5 @@
 
+
 # Named Entity Recognition project for NLP course @ FRI.
 
 
@@ -14,12 +15,10 @@ There are three files on drive. `ner_csv.` is the original dataset. `ner_first_p
 ## Requirements
 
 ### BERT on PyTorch
-We exported the [conda environment](env/nlp-pytorch.yml) for ease of use. To import the file execute `conda env create -f nlp-pytorch.yml` and `conda activate nlp-pytorch`. 
+We exported the [conda environment](requirements/nlp-pytorch.yml) for ease of use. To import the file execute `conda env create -f nlp-pytorch.yml` and `conda activate nlp-pytorch`. 
 
-If you want to retrain the model you can execute 
-
-`python parser.py --dataset conll --file_name ./eng.train` or 
-
+If you want to retrain the model you can execute \
+`python parser.py --dataset conll --file_name ./eng.train` or \
 `python parser.py --dataset gmb --file_name ./ner_first_preprocessing.csv` and it will generate json file for that dataset. 
 
 Download the weights from the google drive link above. They are located in the *weights* folder. The file **conll_ner_bert_pt** are weights trained on CoNLL2003  and **gmb_ner_bert_pt** are trained on GMB dataset.
@@ -36,6 +35,12 @@ After the installations are complete, you can run the **BERT PyTorch.ipynb**. Yo
 - sklearn_crfsuite `conda install -c conda-forge sklearn-crfsuite`
 - numpy, pandas, json
 
-If you are using **pip** you can use `pip install requirements.txt`
+If you are using **pip** you can use the [requirements.txt](requirements/elmo-requirements.txt) `pip install elmo-requirements.txt`
 
-
+The evaluation of the model can be done by executing the `run_ner.py`. This function accepts 3 arguments:
+- sentence:  the sentence you want to evaluate - (string)
+- type: the model name: CONLL or GMB - (string)
+- show_example: if set to True, it will evaluate 3 predefined sentences - (Bool)
+Example: \
+`run_ner.py --sentence "I just had breakfast in London in Blue Cafe" --type GMB`\
+`run_ner.py --type GMB --show_example True`

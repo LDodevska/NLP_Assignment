@@ -66,12 +66,12 @@ def parse_ner_dataset(file_name, save_file=True):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", help='choose which dataset to parse conll or gmb')
+    parser.add_argument("--dataset", help='choose which dataset to parse CONLL or GMB')
     parser.add_argument("--file_name", help='the path to the dataset file that you want to parse')
     args = parser.parse_args()
-    if args.dataset == "conll":
+    if args.dataset.upper() == "CONLL":
     	parse_dataset(args.file_name, True)
-    elif args.dataset == "gmb":
+    elif args.dataset.upper() == "GMB":
     	parse_ner_dataset(args.file_name, True)
     
     
